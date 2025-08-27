@@ -11,6 +11,9 @@ import VideoUpload from "./pages/VideoUpload";
 import Profile from "./pages/Profile";
 import Vehicles from "./pages/Vehicles";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import AdminUsers from "./pages/admin/AdminUsers";  
+import AdminMonitor from "./pages/admin/AdminMonitor";
+import AdminSettings from "./pages/admin/AdminSettings";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -55,17 +58,17 @@ const App = () => (
           } />
           <Route path="/admin/users" element={
             <AppLayout>
-              <div className="p-8 text-center text-muted-foreground">User Management - Coming Soon</div>
+              <AdminUsers />
             </AppLayout>
           } />
           <Route path="/admin/monitor" element={
             <AppLayout>
-              <div className="p-8 text-center text-muted-foreground">System Monitor - Coming Soon</div>
+              <AdminMonitor />
             </AppLayout>
           } />
           <Route path="/admin/settings" element={
             <AppLayout>
-              <div className="p-8 text-center text-muted-foreground">Admin Settings - Coming Soon</div>
+              <AdminSettings />
             </AppLayout>
           } />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
